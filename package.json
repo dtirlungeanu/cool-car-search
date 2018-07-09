@@ -1,0 +1,15 @@
+{
+  "name": "cool-car-search",
+  "version": "1.0.0",
+  "description": "### The purpose of this exercise is for the developer to exhibit their familiarity with frontend technologies, programming patterns and to provide a sample of what clean and reusable code means to them.",
+  "main": "script.js",
+  "scripts": {
+    "json:server": "json-server --watch db.json",
+    "json:server:remote": "json-server https://raw.githubusercontent.com/robheritage/carshop-dev-test/master/db.json"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^0.14.0"
+  }
+}
