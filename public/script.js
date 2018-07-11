@@ -57,19 +57,16 @@ document.getElementById('getText').addEventListener('click', getText);
 	function getText(){
 		console.log(123);
 		fetch('http://localhost:3000/vehicles')
-		.then(function(res){
-			return res.json();
-		})
-		.then(function(data){
-			console.log(data);
+
+		// .then(function(res){
+		// 	return res.json();
+		// })
+		// .then(function(data){
+		// 	console.log(data);
+		// });
+
+		.then((res) => res.text())
+		.then((data) => {
+			document.getElementById('output').innerHTML = data;
 		});
 	}
-
-// document.querySelector('getText').addEventListener('keypress', function (e) {
-//     var key = e.which || e.keyCode;
-//     if (key === 13) { // 13 is enter
-//       function getText(){
-//         console.log(123);
-//       }
-//     }
-// });
