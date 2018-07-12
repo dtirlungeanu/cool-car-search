@@ -54,7 +54,7 @@
 								<div id="searchThis">
 									<div class="wrapper">
 										<form id="getResults">
-											<input type="text" id="title" placeholder="Search" x-webkit-speech/>
+											<input type="text" id="searchCar" placeholder="Search" x-webkit-speech/>
 											<div id="closeSearch">X</div>
 										</form>
 									</div>
@@ -67,21 +67,48 @@
 				</ul>
 			</nav>
 		</div>
-		<div>
+<!-- 		<div>
 			<button type="submit" id="getVehicleInfo" value="Submit">🔍</button>
+		</div> -->
+
+		<div class="container">
+
+			<table class="table table-striped table-bordered table-hover">
+				<thead>
+					<tr>
+						<th>Veh ID:</th>
+						<th>Veh Name:</th>
+						<th>Veh Model:</th>
+						<th>Veh Fuel:</th>
+						<th>Engine Power:</th>
+						<th>Production Year:</th>
+						<th>Fuel Consumption (mpg):</th>
+					</tr>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
 		</div>
-		<div id="output" class="col-lg-12"></div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script
+  src="https://code.jquery.com/jquery-1.11.3.min.js"
+  integrity="sha256-7LkWEzqTdpEfELxcZZlS6wAx5Ff13zZ83lYO2/ujj7g="
+  crossorigin="anonymous"></script>
+
+
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
 	<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
 
     <!-- Local JS -->
 	<script src="script.js" type="text/javascript" charset="utf-8" async defer></script>
 	<script src="controller.js" type="text/javascript" charset="utf-8" async defer></script>
+
 
     <!-- Footer -->
 <!-- 	<div class="footer">
