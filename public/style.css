@@ -248,20 +248,6 @@ ul.primary li:hover > a{
 	color: #333;
 }
 
-#getText{
-	position:fixed;
-	top:195px;
-	right:455px;
-	width:55px;
-	height:55px;
-	text-align:center;
-	line-height:55px;
-	cursor:pointer;
-	background:#EC5020;
-	color:#FFF;
-	font-size:2em;
-}
-
 #closeSearch{
 	position:absolute;
 	top:0;

@@ -53,8 +53,8 @@ $('#closeSearch').click(function(){
   $('#searchResults').empty();
 });
 
-document.getElementById('getText').addEventListener('click', getText);
-	function getText(){
+document.getElementById('getVehicleInfo').addEventListener('click', getVehicleInfo);
+	function getVehicleInfo(){
 		console.log(123);
 		fetch('http://localhost:3000/vehicles')
 
@@ -65,8 +65,19 @@ document.getElementById('getText').addEventListener('click', getText);
 		// 	console.log(data);
 		// });
 
-		.then((res) => res.text())
+		.then((res) => res.json())
 		.then((data) => {
-			document.getElementById('output').innerHTML = data;
-		});
+			let output = '<h2 class="jumbotron ">vehicles</h2>'
+			data.forEach(function(vehicle){ // clearly a loop
+				output += `
+					<ul class="jumbotron">
+						<li class="col-lg-4"><h4> ID: ${vehicle.id} </h4></li>
+						<li class="col-lg-4"><h4> Name: ${vehicle.year} </h4></li>
+						<li class="col-lg-4"><h4> capModelName: ${vehicle.capModelName} </h4></li>
+					</ul>
+				`; //adding on or appending (if my spelling is correct at this hour)				
+			});
+			document.getElementById('output').innerHTML = output;
+		})
+		.catch((err) => console.log(err))
 	}
