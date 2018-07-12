@@ -69,15 +69,36 @@ document.getElementById('getVehicleInfo').addEventListener('click', getVehicleIn
 		.then((data) => {
 			let output = '<h2 class="jumbotron ">vehicles</h2>'
 			data.forEach(function(vehicle){ // clearly a loop
-				output += `
-					<ul class="jumbotron">
-						<li class="col-lg-4"><h4> ID: ${vehicle.id} </h4></li>
+				// implementing hyper text into javascript
+				output += ` 
+					<ul class="jumbotron col-lg-12">
+						<li class="col-lg-4"><h4> ID: ${vehicle.id} </h4></li> 
 						<li class="col-lg-4"><h4> Name: ${vehicle.year} </h4></li>
-						<li class="col-lg-4"><h4> capModelName: ${vehicle.vehicleCapDetails.capModelName} </h4></li>
+						<li class="col-lg-4"><h4> capModelName: ${vehicle.vehicleCapDetails} </h4></li>
 					</ul>
 				`; //adding on or appending (if my spelling is correct at this hour)				
 			});
 			document.getElementById('output').innerHTML = output;
 		})
 		.catch((err) => console.log(err))
+	}
+
+	document.getElementById('getResults').addEventListener('submit', getResults);
+	function getResults(e){
+		e.preventDefault();
+
+		let title = document.getElementById('title').value;
+
+		fetch('http://localhost:3000/vehicles', {
+			method:'GET',
+			headers: { // settin it as an object
+				'Accept': 'application/json, text/plain, */*', // last accept form is anything from anything
+				'Content-type':'application/json'
+			}
+		})
+		.then((res) => res.json())
+		.then((data) => {
+			let output = '<h2 class="jumbotron"> ID: ${vehicle.id}</h2>'
+			document.getElementById('output').innerHTML = output;
+		});
 	}

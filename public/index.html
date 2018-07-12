@@ -54,8 +54,10 @@
 							<div class="wrapper">
 								<div id="searchThis">
 									<div class="wrapper">
-										<input type="text" placeholder="Search" x-webkit-speech/>
-										<div id="closeSearch">X</div>
+										<form id="getResults">
+											<input type="text" id="title" placeholder="Search" x-webkit-speech/>
+											<div id="closeSearch">X</div>
+										</form>
 									</div>
 								</div>
 								<div id="searchResults"></div>
@@ -66,9 +68,10 @@
 				</ul>
 			</nav>
 		</div>
-		<div id=><button id="getVehicleInfo">🔍</button></div>
-
-		<div id="output"></div>
+		<div>
+			<button type="submit" id="getVehicleInfo" value="Submit">🔍</button>
+		</div>
+		<div id="output" class="col-lg-12"></div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
