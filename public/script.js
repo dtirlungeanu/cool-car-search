@@ -73,7 +73,7 @@ document.getElementById('getVehicleInfo').addEventListener('click', getVehicleIn
 					<ul class="jumbotron">
 						<li class="col-lg-4"><h4> ID: ${vehicle.id} </h4></li>
 						<li class="col-lg-4"><h4> Name: ${vehicle.year} </h4></li>
-						<li class="col-lg-4"><h4> capModelName: ${vehicle.capModelName} </h4></li>
+						<li class="col-lg-4"><h4> capModelName: ${vehicle.vehicleCapDetails.capModelName} </h4></li>
 					</ul>
 				`; //adding on or appending (if my spelling is correct at this hour)				
 			});
