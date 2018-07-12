@@ -1,3 +1,25 @@
+$('#searchCar').keydown(function(){
+		$.getJSON('http://localhost:3000/vehicles', function(data){
+			let searchCar = $('#searchCar').val();
+			let regex = new RegExp(searchCar, 'i');
+			let output;
+			$.each(data, function(key, val){
+				// if((val.id.searchCar(regex) != -1) || (val.vehicleCapDetails.capMakeName.searchCar(regex) != -1)){
+					output += "<tr>";
+					output += "<td id='"+key+"'>"+val.id+"</td>";
+					output += "<td id='"+key+"'>"+val.vehicleCapDetails.capMakeName+"</td>";
+					output += "<td id='"+key+"'>"+val.vehicleCapDetails.capModelName+"</td>";
+					output += "<td id='"+key+"'>"+val.fuel+"</td>";
+					output += "<td id='"+key+"'>"+val.statistics.enginePower+"</td>";
+					output += "<td id='"+key+"'>"+val.year+"</td>";
+					output += "<td id='"+key+"'>"+val.statistics.mpg+"</td>";			
+					output += "</tr>";
+				// }
+			});
+			$('tbody').html(output);
+		});
+	})
+
 
 // document.getElementById('getVehicleInfo').addEventListener('click', getVehicleInfo);
 // 	function getVehicleInfo(){
@@ -83,27 +105,3 @@
 	// 	});
 	// });
 	// }
-
-
-
-	$('#searchCar').keydown(function(){
-		$.getJSON('http://localhost:3000/vehicles', function(data){
-			var searchCar = $('#searchCar').val();
-			var regex = new RegExp(searchCar, 'i');
-			var output;
-			$.each(data, function(key, val){
-				// if((val.id.search(regex) != -1) || (val.year.search(regex) != -1)){
-					output += "<tr>";
-					output += "<td id='"+key+"'>"+val.id+"</td>";
-					output += "<td id='"+key+"'>"+val.vehicleCapDetails.capMakeName+"</td>";
-					output += "<td id='"+key+"'>"+val.vehicleCapDetails.capModelName+"</td>";
-					output += "<td id='"+key+"'>"+val.fuel+"</td>";
-					output += "<td id='"+key+"'>"+val.statistics.enginePower+"</td>";
-					output += "<td id='"+key+"'>"+val.year+"</td>";
-					output += "<td id='"+key+"'>"+val.statistics.mpg+"</td>";			
-					output += "</tr>";
-				// }
-			});
-			$('tbody').html(output);
-		});
-	})
