@@ -4,7 +4,7 @@ $('#search').keydown(function(){
 			let regex = new RegExp(search, 'i');
 			let output;
 			$.each(data, function(key, value){
-				if(value.id.search(regex) != -1 || value.vehicleCapDetails.capMakeName.search(regex) != -1){
+				if(key && value && typeof value >= 0 || value.vehicleCapDetails.capMakeName.search(regex) !== -1){
 					output += "<tr>";
 					output += "<td id='"+key+"'>"+value.id+"</td>";
 					output += "<td id='"+key+"'>"+value.vehicleCapDetails.capMakeName+"</td>";
