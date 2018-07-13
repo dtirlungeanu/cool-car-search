@@ -12,7 +12,8 @@ $('#search').keyup(function(){
 				output += "<td id='"+key+"'>"+value.fuel+"</td>";
 				output += "<td id='"+key+"'>"+value.statistics.enginePower+"</td>";
 				output += "<td id='"+key+"'>"+value.year+"</td>";
-				output += "<td id='"+key+"'>"+value.statistics.mpg+"</td>";			
+				output += "<td id='"+key+"'>"+value.statistics.mpg+"</td>";
+				output += "<td id='"+key+"'>"+value.vehiclePrice.salePrice+"</td>";			
 				output += "</tr>";
 			}
 		});
@@ -41,7 +42,8 @@ $('#AudiA1').click(function(){
 				output += "<td>"+value.fuel+"</td>";
 				output += "<td>"+value.statistics.enginePower+"</td>";
 				output += "<td>"+value.year+"</td>";
-				output += "<td>"+value.statistics.mpg+"</td>";			
+				output += "<td>"+value.statistics.mpg+"</td>";
+				output += "<td>"+value.vehiclePrice.salePrice+"</td>";		
 				output += "</tr>";
 			}
 		});
@@ -62,7 +64,8 @@ $('#AudiA3').click(function(){
 				output += "<td>"+value.fuel+"</td>";
 				output += "<td>"+value.statistics.enginePower+"</td>";
 				output += "<td>"+value.year+"</td>";
-				output += "<td>"+value.statistics.mpg+"</td>";			
+				output += "<td>"+value.statistics.mpg+"</td>";
+				output += "<td>"+value.vehiclePrice.salePrice+"</td>";		
 				output += "</tr>";
 			}
 		});
@@ -75,7 +78,7 @@ $('#AudiA5').click(function(){
 	.then((data) => {
 		let output;
 		data.forEach(function(value){ // clearly a loop
-			if (value.vehicleCapDetails.capRangeName == 'A1') {
+			if (value.vehicleCapDetails.capRangeName == 'A5') {
 				output += "<tr>";
 				output += "<td>"+value.id+"</td>";
 				output += "<td>"+value.vehicleCapDetails.capMakeName+"</td>";
@@ -83,7 +86,8 @@ $('#AudiA5').click(function(){
 				output += "<td>"+value.fuel+"</td>";
 				output += "<td>"+value.statistics.enginePower+"</td>";
 				output += "<td>"+value.year+"</td>";
-				output += "<td>"+value.statistics.mpg+"</td>";			
+				output += "<td>"+value.statistics.mpg+"</td>";
+				output += "<td>"+value.vehiclePrice.salePrice+"</td>";	
 				output += "</tr>";
 			}
 		});
@@ -91,12 +95,12 @@ $('#AudiA5').click(function(){
 	});
 });
 
-$('#AudiA1').click(function(){
+$('#AudiA7').click(function(){
 	$.getJSON('http://localhost:3000/vehicles')
 	.then((data) => {
 		let output;
 		data.forEach(function(value){ // clearly a loop
-			if (value.vehicleCapDetails.capRangeName == 'A1') {
+			if (value.vehicleCapDetails.capRangeName == 'A7') {
 				output += "<tr>";
 				output += "<td>"+value.id+"</td>";
 				output += "<td>"+value.vehicleCapDetails.capMakeName+"</td>";
@@ -104,7 +108,8 @@ $('#AudiA1').click(function(){
 				output += "<td>"+value.fuel+"</td>";
 				output += "<td>"+value.statistics.enginePower+"</td>";
 				output += "<td>"+value.year+"</td>";
-				output += "<td>"+value.statistics.mpg+"</td>";			
+				output += "<td>"+value.statistics.mpg+"</td>";
+				output += "<td>"+value.vehiclePrice.salePrice+"</td>";
 				output += "</tr>";
 			}
 		});
@@ -112,12 +117,12 @@ $('#AudiA1').click(function(){
 	});
 });
 
-$('#AudiA1').click(function(){
+$('#AudiA8').click(function(){
 	$.getJSON('http://localhost:3000/vehicles')
 	.then((data) => {
 		let output;
 		data.forEach(function(value){ // clearly a loop
-			if (value.vehicleCapDetails.capRangeName == 'A1') {
+			if (value.vehicleCapDetails.capRangeName == 'A8') {
 				output += "<tr>";
 				output += "<td>"+value.id+"</td>";
 				output += "<td>"+value.vehicleCapDetails.capMakeName+"</td>";
@@ -125,7 +130,8 @@ $('#AudiA1').click(function(){
 				output += "<td>"+value.fuel+"</td>";
 				output += "<td>"+value.statistics.enginePower+"</td>";
 				output += "<td>"+value.year+"</td>";
-				output += "<td>"+value.statistics.mpg+"</td>";			
+				output += "<td>"+value.statistics.mpg+"</td>";
+				output += "<td>"+value.vehiclePrice.salePrice+"</td>";
 				output += "</tr>";
 			}
 		});
@@ -133,12 +139,12 @@ $('#AudiA1').click(function(){
 	});
 });
 
-$('#AudiA1').click(function(){
+$('#AudiTT').click(function(){
 	$.getJSON('http://localhost:3000/vehicles')
 	.then((data) => {
 		let output;
 		data.forEach(function(value){ // clearly a loop
-			if (value.vehicleCapDetails.capRangeName == 'A1') {
+			if (value.vehicleCapDetails.capRangeName == 'TT') {
 				output += "<tr>";
 				output += "<td>"+value.id+"</td>";
 				output += "<td>"+value.vehicleCapDetails.capMakeName+"</td>";
@@ -146,7 +152,8 @@ $('#AudiA1').click(function(){
 				output += "<td>"+value.fuel+"</td>";
 				output += "<td>"+value.statistics.enginePower+"</td>";
 				output += "<td>"+value.year+"</td>";
-				output += "<td>"+value.statistics.mpg+"</td>";			
+				output += "<td>"+value.statistics.mpg+"</td>";
+				output += "<td>"+value.vehiclePrice.salePrice+"</td>";
 				output += "</tr>";
 			}
 		});
@@ -154,7 +161,159 @@ $('#AudiA1').click(function(){
 	});
 });
 
+$('#AudiQ7').click(function(){
+	$.getJSON('http://localhost:3000/vehicles')
+	.then((data) => {
+		let output;
+		data.forEach(function(value){ // clearly a loop
+			if (value.vehicleCapDetails.capRangeName == 'Q7') {
+				output += "<tr>";
+				output += "<td>"+value.id+"</td>";
+				output += "<td>"+value.vehicleCapDetails.capMakeName+"</td>";
+				output += "<td>"+value.vehicleCapDetails.capModelName+"</td>";
+				output += "<td>"+value.fuel+"</td>";
+				output += "<td>"+value.statistics.enginePower+"</td>";
+				output += "<td>"+value.year+"</td>";
+				output += "<td>"+value.statistics.mpg+"</td>";
+				output += "<td>"+value.vehiclePrice.salePrice+"</td>";
+				output += "</tr>";
+			}
+		});
+	$('tbody').html(output);
+	});
+});
 
+$('#BMW1').click(function(){
+	$.getJSON('http://localhost:3000/vehicles')
+	.then((data) => {
+		let output;
+		data.forEach(function(value){ // clearly a loop
+			if (value.vehicleCapDetails.capRangeName == '1 SERIES') {
+				output += "<tr>";
+				output += "<td>"+value.id+"</td>";
+				output += "<td>"+value.vehicleCapDetails.capMakeName+"</td>";
+				output += "<td>"+value.vehicleCapDetails.capModelName+"</td>";
+				output += "<td>"+value.fuel+"</td>";
+				output += "<td>"+value.statistics.enginePower+"</td>";
+				output += "<td>"+value.year+"</td>";
+				output += "<td>"+value.statistics.mpg+"</td>";
+				output += "<td>"+value.vehiclePrice.salePrice+"</td>";
+				output += "</tr>";
+			}
+		});
+	$('tbody').html(output);
+	});
+});
+
+$('#BMW3').click(function(){
+	$.getJSON('http://localhost:3000/vehicles')
+	.then((data) => {
+		let output;
+		data.forEach(function(value){ // clearly a loop
+			if (value.vehicleCapDetails.capRangeName == '3 SERIES') {
+				output += "<tr>";
+				output += "<td>"+value.id+"</td>";
+				output += "<td>"+value.vehicleCapDetails.capMakeName+"</td>";
+				output += "<td>"+value.vehicleCapDetails.capModelName+"</td>";
+				output += "<td>"+value.fuel+"</td>";
+				output += "<td>"+value.statistics.enginePower+"</td>";
+				output += "<td>"+value.year+"</td>";
+				output += "<td>"+value.statistics.mpg+"</td>";
+				output += "<td>"+value.vehiclePrice.salePrice+"</td>";
+				output += "</tr>";
+			}
+		});
+	$('tbody').html(output);
+	});
+});
+
+$('#BMW5').click(function(){
+	$.getJSON('http://localhost:3000/vehicles')
+	.then((data) => {
+		let output;
+		data.forEach(function(value){ // clearly a loop
+			if (value.vehicleCapDetails.capRangeName == 'M5') {
+				output += "<tr>";
+				output += "<td>"+value.id+"</td>";
+				output += "<td>"+value.vehicleCapDetails.capMakeName+"</td>";
+				output += "<td>"+value.vehicleCapDetails.capModelName+"</td>";
+				output += "<td>"+value.fuel+"</td>";
+				output += "<td>"+value.statistics.enginePower+"</td>";
+				output += "<td>"+value.year+"</td>";
+				output += "<td>"+value.statistics.mpg+"</td>";
+				output += "<td>"+value.vehiclePrice.salePrice+"</td>";
+				output += "</tr>";
+			}
+		});
+	$('tbody').html(output);
+	});
+});
+
+$('#BMWX5').click(function(){
+	$.getJSON('http://localhost:3000/vehicles')
+	.then((data) => {
+		let output;
+		data.forEach(function(value){ // clearly a loop
+			if (value.vehicleCapDetails.capRangeName == 'X5') {
+				output += "<tr>";
+				output += "<td>"+value.id+"</td>";
+				output += "<td>"+value.vehicleCapDetails.capMakeName+"</td>";
+				output += "<td>"+value.vehicleCapDetails.capModelName+"</td>";
+				output += "<td>"+value.fuel+"</td>";
+				output += "<td>"+value.statistics.enginePower+"</td>";
+				output += "<td>"+value.year+"</td>";
+				output += "<td>"+value.statistics.mpg+"</td>";
+				output += "<td>"+value.vehiclePrice.salePrice+"</td>";
+				output += "</tr>";
+			}
+		});
+	$('tbody').html(output);
+	});
+});
+
+$('#FordKA').click(function(){
+	$.getJSON('http://localhost:3000/vehicles')
+	.then((data) => {
+		let output;
+		data.forEach(function(value){ // clearly a loop
+			if (value.vehicleCapDetails.capRangeName == 'KA') {
+				output += "<tr>";
+				output += "<td>"+value.id+"</td>";
+				output += "<td>"+value.vehicleCapDetails.capMakeName+"</td>";
+				output += "<td>"+value.vehicleCapDetails.capModelName+"</td>";
+				output += "<td>"+value.fuel+"</td>";
+				output += "<td>"+value.statistics.enginePower+"</td>";
+				output += "<td>"+value.year+"</td>";
+				output += "<td>"+value.statistics.mpg+"</td>";
+				output += "<td>"+value.vehiclePrice.salePrice+"</td>";
+				output += "</tr>";
+			}
+		});
+	$('tbody').html(output);
+	});
+});
+
+$('#FordFiesta').click(function(){
+	$.getJSON('http://localhost:3000/vehicles')
+	.then((data) => {
+		let output;
+		data.forEach(function(value){ // clearly a loop
+			if (value.vehicleCapDetails.capRangeName == 'FIESTA') {
+				output += "<tr>";
+				output += "<td>"+value.id+"</td>";
+				output += "<td>"+value.vehicleCapDetails.capMakeName+"</td>";
+				output += "<td>"+value.vehicleCapDetails.capModelName+"</td>";
+				output += "<td>"+value.fuel+"</td>";
+				output += "<td>"+value.statistics.enginePower+"</td>";
+				output += "<td>"+value.year+"</td>";
+				output += "<td>"+value.statistics.mpg+"</td>";
+				output += "<td>"+value.vehiclePrice.salePrice+"</td>";
+				output += "</tr>";
+			}
+		});
+	$('tbody').html(output);
+	});
+});
 
 
 

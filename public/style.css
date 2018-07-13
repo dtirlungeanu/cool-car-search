@@ -1,3 +1,10 @@
+th:hover{
+  cursor: alias;
+  display: block;
+  color: #000;
+  background: #eeeeee;
+}
+
 .ball {
   position: absolute;
   border-radius: 100%;
